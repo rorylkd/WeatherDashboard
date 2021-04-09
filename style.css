@@ -1,1 +1,66 @@
-/*First commit*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.search {
+  background-color: #5f9EA0;
+}
+
+.searchres{
+  background-color: #4169e1;
+  overflow: hidden;
+}
+
+.sidebar {
+    width: 300px;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    padding: 8px 0;
+  }
+
+  .sidebar button{
+    padding: 15px 15px 15px 16px;
+    font-size: 15px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 275px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 20px;
+    
+    color: white;
+  }
+
+  .sidebar input{
+    padding: 10px 10px 10px 20px;
+    font-size: 25px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 275px;
+    border-radius: 10px;
+  }
+
+
+  header {
+      display: inline-block;
+      width: 95%;
+      padding: 25px 25px 25px 25px;
+      background-color: deepskyblue;
+      color: white;
+      font-size: 50px;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align: center;
+      border-style: solid;
+      border-radius: 5px;
+      border-color: #614051;
+  }
+
+  li {
+    list-style-type: none;
+}
+
+  
