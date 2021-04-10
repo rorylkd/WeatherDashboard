@@ -64,7 +64,7 @@ body {
       display: inline-block;
       width: 96%;
       padding: 25px 25px 25px 25px;
-      background-color: deepskyblue;
+      background-image: linear-gradient(to right, deepskyblue , #00394d);
       color: white;
       font-size: 50px;
       font-family:Arial, Helvetica, sans-serif;
