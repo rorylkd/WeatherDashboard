@@ -40,9 +40,29 @@ var cityFiveDayWeatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?q='
     
     // Date stuff goes here
     const dateEl = document.getElementById("date");
+    const day1El = document.getElementById("day1Date");
+    const day2El = document.getElementById("day2Date");
+    const day3El = document.getElementById("day3Date");
+    const day4El = document.getElementById("day4Date");
+    const day5El = document.getElementById("day5Date");
+
     today = moment();
     var currentDate = today.format("DD-MM-YY");
-    dateEl.innerHTML = currentDate;
+    var day1Date = moment().add(1, 'days').format("DD-MM-YY");
+    var day2Date = moment().add(2, 'days').format("DD-MM-YY");
+    var day3Date = moment().add(3, 'days').format("DD-MM-YY");
+    var day4Date = moment().add(4, 'days').format("DD-MM-YY");
+    var day5Date = moment().add(5, 'days').format("DD-MM-YY");
+    
+    dateEl.innerHTML = '('+currentDate+')';
+    day1El.innerHTML = '('+day1Date+')';
+    day2El.innerHTML = '('+day2Date+')';
+    day3El.innerHTML = '('+day3Date+')';
+    day4El.innerHTML = '('+day4Date+')';
+    day5El.innerHTML = '('+day5Date+')';
+    
+    
+
     
     
     cityNameEl.innerHTML = weatherData.name; 
@@ -53,8 +73,8 @@ var cityFiveDayWeatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?q='
     
 
     // To get UV index, i need long & lat of a city as the API I'd need to use doesn't take city name as a parameter.
-    // To get long+lat of a city, I can look it up using the data used above(ex. weatherData.coord.lat & weatherData.coord.long). 
-    // I need to use that data to build the URL needed to call the other API (the One Call API, as the UV Index API is retired since April 1st 2021)
+    // To get long+lat of a city, I can look it up using the data used above(ex. weatherData.coord.lat & weatherData.coord.lon). 
+    
     
 
     var longitude = weatherData.coord.lon;

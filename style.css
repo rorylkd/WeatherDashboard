@@ -116,6 +116,7 @@ body {
   color: white;
   flex-grow: 1;
   background-color: #00394d;
+  font-size: 10px;
 }
 
 .day2{
@@ -127,6 +128,7 @@ body {
   color: white;
   flex-grow: 1;
   background-color: #00394d;
+  font-size: 10px;
 }
 
 .day3{
@@ -138,6 +140,7 @@ body {
   color: white;
   flex-grow: 1;
   background-color: #00394d;
+  font-size: 10px;
 }
 
 .day4{
@@ -149,6 +152,7 @@ body {
   color: white;
   flex-grow: 1;
   background-color: #00394d;
+  font-size: 10px;
 }
 
 .day5{
@@ -160,6 +164,7 @@ body {
   color: white;
   flex-grow: 1;
   background-color: #00394d;
+  font-size: 10px;
 }
 
 .weatherDisplayHeader{
