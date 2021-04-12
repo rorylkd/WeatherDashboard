@@ -19,7 +19,7 @@ body {
 
 }
 
-.weatherdisplay{
+.weatherDisplay{
   order: 2;
   width: 85%;
   
@@ -92,7 +92,7 @@ body {
  
 }
 
-.fiveday{
+.fiveDay{
   order: 2;
   width: 100%;
   height: 250px;
@@ -101,7 +101,7 @@ body {
   font-weight: bold;
 }
 
-.daycontainer{
+.dayContainer{
   display: flex;
   flex-direction: row;
   
@@ -160,6 +160,34 @@ body {
   color: white;
   flex-grow: 1;
   background-color: #00394d;
+}
+
+.weatherDisplayHeader{
+  display: flex;
+  flex-direction: row;
+}
+
+.cityName{
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.date{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+
+.icon{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.weatherItems{
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 

@@ -24,9 +24,48 @@ var cityFiveDayWeatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?q='
     })
     .then(function(weatherData){
         console.log(weatherData);
+        console.log(weatherData.name);
+        console.log(weatherData.main.temp);
+
+    const currentTemp = weatherData.main.temp - 273.15 // Temp is given in degrees kelvin, need celsius. 
+    console.log(currentTemp);
+    roundedCurrentTemp = Math.round(currentTemp*100)/100; //Rounding our temp to two decimal places
+    console.log(roundedCurrentTemp);
+
+    // More Selectors
+
+    const cityNameEl = document.getElementById("cityName");
+    const tempEl = document.getElementById("temp");
+    const windEl = document.getElementById("wind");
+    const humidityEl = document.getElementById("humidity");
+    const UVindexEl = document.getElementById("UVindex");
+    const iconEl = document.getElementById("icon");
+    
+    // Date stuff goes here
+    const dateEl = document.getElementById("date");
+    today = moment();
+    var currentDate = today.format("DD-MM-YY");
+    dateEl.innerHTML = currentDate;
+    
+    
+    cityNameEl.innerHTML = weatherData.name; 
+    tempEl.innerHTML = "Temp: " + roundedCurrentTemp + "°C";
+    windEl.innerHTML = "Wind: " + weatherData.wind.speed + "m/s";
+    humidityEl.innerHTML = "Humidity: " + weatherData.main.humidity + "%";
+    iconEl.innerHTML = weatherData.weather.icon;
+    // tempEl.innerHTML = "UV Index: " + ;
+    
+    
+    
     });
 
 
+    
+
+
+
+
+    
 }}
 
 

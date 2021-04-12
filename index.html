@@ -21,11 +21,23 @@
              </div>
             
             
-            <div class="weatherdisplay">
+            <div class="weatherDisplay">
                 <div class="column">
-                    <div class="today">Daily forecast goes here</div>
-                    <div class="fiveday">5 Day Forecast:
-                        <div class="daycontainer">
+                    <div class="today">
+                        <div class="weatherDisplayHeader">
+                            <p class="cityName" id="cityName">City Name</p> 
+                            <p class="date" id="date">Date</p>
+                            <p class="icon" id="icon">Icon</p>
+                        </div>
+                        <div class="weatherItems">
+                            <p id="temp">Temp:</p>
+                            <p id="wind">Wind:</p>
+                            <p id="humidity">Humidity:</p>
+                            <p id="UVindex">UV Index:</p>
+                        </div>
+                    </div>
+                    <div class="fiveDay">5 Day Forecast:
+                        <div class="dayContainer">
                             <div class="day1">day1</div>
                             <div class="day2">day2</div>
                             <div class="day3">day3</div>
@@ -38,6 +50,7 @@
         
         </div>
         <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     </body>
     
 </html>
