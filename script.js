@@ -52,7 +52,7 @@ var cityFiveDayWeatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?q='
     tempEl.innerHTML = "Temp: " + roundedCurrentTemp + "°C";
     windEl.innerHTML = "Wind: " + weatherData.wind.speed + "m/s";
     humidityEl.innerHTML = "Humidity: " + weatherData.main.humidity + "%";
-    iconEl.innerHTML = weatherData.weather.icon;
+    iconEl.src = "http://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@2x.png";
     // tempEl.innerHTML = "UV Index: " + ;
     
     
