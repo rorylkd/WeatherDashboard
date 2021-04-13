@@ -104,6 +104,7 @@ body {
 .dayContainer{
   display: flex;
   flex-direction: row;
+
   
 }
 
@@ -193,6 +194,19 @@ body {
 .weatherItems{
   font-size: 20px;
   margin-left: 10px;
+}
+
+.dayContainer p{
+  margin-left: 15px;
+
+}
+
+.dayContainer img{
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+  display: none; /*I wanted to make sure the broken image links didn't show up*/
+  
 }
 
 
