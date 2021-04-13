@@ -15,8 +15,8 @@ searchListEl.insertAdjacentHTML('afterend', '<button class="searchres">'+ cityNa
 
 // Calling the Weather API
 
-var cityCurrentWeatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=b5d4186b9b4d74b711271811c8313863';
-var cityFiveDayWeatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?q='+cityName+'&appid=b5d4186b9b4d74b711271811c8313863';
+var cityCurrentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=b5d4186b9b4d74b711271811c8313863';
+var cityFiveDayWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='+cityName+'&appid=b5d4186b9b4d74b711271811c8313863';
 
  console.log(cityCurrentWeatherUrl);
  console.log(cityFiveDayWeatherUrl);
