@@ -10,6 +10,9 @@ const cityName = inputBoxEl.value; // New variable based on the string typed int
 if(cityName!==""){ // Doesn't make a button if the string is empty
 searchListEl.insertAdjacentHTML('afterend', '<button class="searchres">'+ cityName +'</button>'); // Creates button elements under the search list element and gives them cityName
 
+
+
+
 // Calling the Weather API
 
 var cityCurrentWeatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=b5d4186b9b4d74b711271811c8313863';
@@ -143,43 +146,56 @@ var cityFiveDayWeatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?q='
              var day3TempCelcius = OneCallData.daily[2].temp.day - 273.15;
              var day4TempCelcius = OneCallData.daily[3].temp.day - 273.15;
              var day5TempCelcius = OneCallData.daily[4].temp.day - 273.15;
+
+            var roundedCurrentTemp1 = Math.round(day1TempCelcius*100)/100;
+            var roundedCurrentTemp2 = Math.round(day2TempCelcius*100)/100;
+            var roundedCurrentTemp3 = Math.round(day3TempCelcius*100)/100;
+            var roundedCurrentTemp4 = Math.round(day4TempCelcius*100)/100;
+            var roundedCurrentTemp5 = Math.round(day5TempCelcius*100)/100;
              
 
-            temp1El.innerHTML ="Temp: "+ day1TempCelcius +"°C"; //Adding my elements based on the API data.
+            temp1El.innerHTML ="Temp: "+ roundedCurrentTemp1 +"°C"; //Adding my elements based on the API data.
             wind1El.innerHTML = "Wind: "+ OneCallData.daily[0].wind_speed + "m/s";
             humidity1El.innerHTML = "Humidity: "+ OneCallData.daily[0].humidity + "%";
            icon1El.src = "http://openweathermap.org/img/wn/"+ OneCallData.daily[0].weather[0].icon +"@2x.png";
            icon1El.style.display = "block"; //Making my img visible
 
-           temp2El.innerHTML ="Temp: "+ day2TempCelcius +"°C";
+           temp2El.innerHTML ="Temp: "+ roundedCurrentTemp2 +"°C";
             wind2El.innerHTML = "Wind: "+ OneCallData.daily[1].wind_speed + "m/s";
             humidity2El.innerHTML = "Humidity: "+ OneCallData.daily[1].humidity + "%";
             icon2El.src = "http://openweathermap.org/img/wn/"+ OneCallData.daily[1].weather[0].icon +"@2x.png";
             icon2El.style.display = "block";
 
-            temp3El.innerHTML ="Temp: "+ day3TempCelcius +"°C";
+            temp3El.innerHTML ="Temp: "+ roundedCurrentTemp3 +"°C";
             wind3El.innerHTML = "Wind: "+ OneCallData.daily[2].wind_speed + "m/s";
             humidity3El.innerHTML = "Humidity: "+ OneCallData.daily[2].humidity + "%";
             icon3El.src = "http://openweathermap.org/img/wn/"+ OneCallData.daily[2].weather[0].icon +"@2x.png";
             icon3El.style.display = "block";
 
-            temp4El.innerHTML ="Temp: "+ day4TempCelcius +"°C";
+            temp4El.innerHTML ="Temp: "+ roundedCurrentTemp4 +"°C";
             wind4El.innerHTML = "Wind: "+ OneCallData.daily[3].wind_speed + "m/s";
             humidity4El.innerHTML = "Humidity: "+ OneCallData.daily[3].humidity + "%";
             icon4El.src = "http://openweathermap.org/img/wn/"+ OneCallData.daily[3].weather[0].icon +"@2x.png";
             icon4El.style.display = "block";
 
-            temp5El.innerHTML ="Temp: "+ day5TempCelcius +"°C";
+            temp5El.innerHTML ="Temp: "+ roundedCurrentTemp5 +"°C";
             wind5El.innerHTML = "Wind: "+ OneCallData.daily[4].wind_speed + "m/s";
             humidity5El.innerHTML = "Humidity: "+ OneCallData.daily[4].humidity + "%";
             icon5El.src = "http://openweathermap.org/img/wn/"+ OneCallData.daily[4].weather[0].icon +"@2x.png";
             icon5El.style.display = "block";
 
 
+            //function saveText() {
+              //  var myText = document.getElementById("selectAllText").value;
+                //localStorage.setItem("myText", myText);
+            //}
+    
+            //saveText();
+
+
 
 
         });
-    
     
     
     
