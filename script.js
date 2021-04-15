@@ -7,14 +7,20 @@ const inputBoxEl = document.getElementById("inputBox"); //Selectors
 const searchListEl = document.getElementById("searchList"); 
 
 const cityName = inputBoxEl.value; // New variable based on the string typed into the input box
+
+localStorage.setItem('StoredCityName', cityName);  // This whole program is badly organized and I'd have to rewrite everything to get it to read from localStorage. I give up
+        var getStored = localStorage.getItem('StoredCityName');
+        console.log(getStored);
+
 if(cityName!==""){ // Doesn't make a button if the string is empty
-searchListEl.insertAdjacentHTML('afterend', '<button class="searchres">'+ cityName +'</button>'); // Creates button elements under the search list element and gives them cityName
+searchListEl.insertAdjacentHTML('afterend', '<button id='+ getStored +' class="searchres">'+ getStored +'</button>'); // Creates button elements under the search list element and gives them cityName
+callWeatherAPI(getStored);
 
 
 
 
 // Calling the Weather API
-
+function callWeatherAPI(cityName){
 var cityCurrentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=b5d4186b9b4d74b711271811c8313863';
 var cityFiveDayWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='+cityName+'&appid=b5d4186b9b4d74b711271811c8313863';
 
@@ -27,7 +33,7 @@ var cityFiveDayWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=
     })
     .then(function(weatherData){
         console.log(weatherData);
-        
+
 
     const currentTemp = weatherData.main.temp - 273.15 // Temp is given in degrees kelvin, need celsius. 
     roundedCurrentTemp = Math.round(currentTemp*100)/100; //Rounding our temp to two decimal places
@@ -185,17 +191,12 @@ var cityFiveDayWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=
             icon5El.style.display = "block";
 
 
-            //function saveText() {
-              //  var myText = document.getElementById("selectAllText").value;
-                //localStorage.setItem("myText", myText);
-            //}
-    
-            //saveText();
-
 
 
 
         });
+
+        
     
     
     
@@ -223,5 +224,5 @@ var cityFiveDayWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=
 
 
 
-
+}
 
