@@ -26,6 +26,7 @@ Screenshot #2:
 - Javascript
 - CSS
 - OpenWeather API
+- Moment.js
 
 ## License
 
