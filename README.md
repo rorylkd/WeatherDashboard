@@ -27,6 +27,10 @@ Screenshot #2:
 - CSS
 - OpenWeather API
 
+## License
+
+- MIT
+
 
 
 
